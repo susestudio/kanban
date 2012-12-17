@@ -1,0 +1,80 @@
+#!/usr/bin/ruby
+
+require File.expand_path('../../lib/kanban',__FILE__)
+
+output_dir = "html"
+input_file = InputFile.default_file
+do_pull = false
+compact_lanes = false
+
+opt = OptionParser.new
+opt.banner = "Usage: kanban <input-file>"
+
+opt.on( "-h", "--help", "Print this message" ) do
+  puts opt
+  exit
+end
+
+opt.on( "-o <dir>", "--output-dir <dir>", "Output directory" ) do |value|
+  output_dir = value
+end
+
+opt.on( "-n <string>", "--new <string>", "Create new item in the In column" ) do |value|
+  InputFile.create_new_item value, input_file
+  exit 0
+end
+
+opt.on( "--pull", "Pull git before creating the board" ) do
+  do_pull = true
+end
+
+opt.on( "--compact-lanes", "Compact lanes to minimize board size" ) do
+  compact_lanes = true
+end
+
+begin
+  opt.parse!( ARGV )
+rescue OptionParser::InvalidOption
+  STDERR.puts $!
+  STDERR.puts opt
+  exit
+end
+
+if ARGV.size == 1
+  input_file = ARGV[0]
+elsif ARGV.size > 1
+  puts opt
+  exit
+end
+
+if do_pull
+  puts "Updating git repository..."
+  cmd = "cd #{File.dirname input_file}; git pull"
+  system cmd
+end
+
+puts "Parsing file #{input_file}"
+
+board = InputFile.parse_file input_file
+
+puts "Creating board '#{board.title}'..."
+
+puts "Checking lane tags..."
+board.check_lanes
+
+puts "Writing files..."
+if !output_dir
+  STDERR.puts "You need to specify an output directory."
+  exit 1
+end
+
+output = Output.new board
+output.compact_lanes = compact_lanes
+
+output.create output_dir
+
+puts "Writing statistics..."
+statistics = Statistics.new
+statistics.write_data board, output_dir
+
+puts "Done. #{board.items.count} items processed."

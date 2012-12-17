@@ -1,0 +1,18 @@
+%header
+  %style{:type => "text/css", :media => "screen"}
+    = css
+  %title Board - Kanban
+
+%body
+
+  %h1 #{board.title}
+
+  .content  
+    = render_board
+
+  .navigation
+    = render_navigation
+
+  .footer
+    %p
+      %em Generated on #{Time.now} by kanban.

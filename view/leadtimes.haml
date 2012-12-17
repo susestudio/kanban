@@ -1,0 +1,22 @@
+%header
+  %style{:type => "text/css", :media => "screen"}
+    = css
+
+  %script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"}
+  %script{:src => "http://people.iola.dk/olau/flot/jquery.flot.js"}
+
+  %title Lead times - Kanban
+
+%body
+
+  %h1 #{board.title}
+  
+  .content
+    = render_leadtimes
+
+  .navigation
+    = render_navigation
+
+  .footer
+    %p
+      %em Generated on #{Time.now} by kanban.

@@ -1,0 +1,68 @@
+# My Team
+
+## In (16)
+
+The tasks we work on next. They are added at the backlog grooming meeting.
+
+* Fix crash (#bug,in:2012-12-5,@jim)
+* Wrong output (#bug,in:2012-12-10,@joe,#online)
+* Refactor library (#maintenance,in:2012-12-12,@jack)
+
+## Analysis & design (6)
+
+Understanding the task and designing a solution.
+
+### WIP
+
+* New form (#feature,in:2012-12-11,@jim)
+
+### Done
+
+* Fix error (#bug,in:2012-12-11,@joe)
+
+## Development (8)
+
+### WIP
+
+* Fix error 1 (#bug,in:2012-12-10,@joe)
+* Fix error 2 (#bug,in:2012-12-11,@joe,#onsite)
+* Fix error 3 (#bug,in:2012-12-12,@joe)
+
+### Done
+
+* Fix error 4 (#bug,in:2012-12-11,@joe)
+
+## Review (8)
+
+### WIP
+
+
+### Done
+
+
+## Ready for release (16)
+
+Done, reviewed, and merged items, which are ready for release.
+
+
+## Ready for test (16)
+
+Items on staging or ready for testing in any other way.
+
+* New report (#feature,in:2012-12-01,@john)
+
+## Test (6)
+
+Items under test.
+
+
+## Ready for deploy (16)
+
+Successfully tested items, which are ready for deployment.
+
+
+## Done
+
+Deployed, released, and done done.
+
+* Refactoring (#maintenance,in:2012-11-11,@jack,done:2012-12-15)

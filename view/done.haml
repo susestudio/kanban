@@ -1,0 +1,22 @@
+%header
+  %style{:type => "text/css", :media => "screen"}
+    = css
+  %title Done - Kanban
+
+%body
+
+  %h1 #{board.title}
+  
+  .content
+    %h2 All done tasks
+    = render_done
+
+    %h2 All trashed tasks
+    = render_trashed
+
+  .navigation
+    = render_navigation
+
+  .footer
+    %p
+      %em Generated on #{Time.now} by kanban.

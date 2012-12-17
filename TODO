@@ -1,0 +1,13 @@
+# TODO
+
+* Make header of table stay when scrolling
+* Show column/state on "who does what" state
+
+* Show status of bugs on the board taken from Bugzilla API
+
+* Show gravatars of people on board
+* Show a graph of lead times on the done page
+
+* Git hooks to update other tools, when things are moving on the board
+
+* Configuration options for reference URLs

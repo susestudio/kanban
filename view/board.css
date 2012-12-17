@@ -1,0 +1,91 @@
+h1 {
+  text-align: center;
+}
+
+.content {
+  margin: 0px auto;
+}
+.footer p {
+  text-align: center;
+}
+
+.navigation {
+  text-align:center;
+}
+.navigation ul li {
+  display: inline;
+  list-style-type: none;
+  padding-right: 20px;
+}
+
+table {
+  border-width: 1px;
+  border-color: gray;
+}
+.item {
+  background-color: #ffffb3;
+  margin: 6px;
+  border: 1px solid #b9b9b9;
+  border-bottom-color: gray;
+  border-right-color: gray;
+  border-radius: 3px;
+  padding: 8px;
+}
+.item.tag_online {
+  background-color: #ffff6a;
+}
+.item.tag_onsite {
+  background-color: #ffe76a;
+}
+td {
+  background-color: #e3e3e3;
+  vertical-align: top;
+  position: relative;
+  border-width: 0px;
+}
+th {
+  background-color: #f0f0f0;
+  border-width: 0px;
+}
+
+.blocked {
+  background-color: red;
+  padding: 2px;
+  border: 1px solid #b9b9b9;
+  border-bottom-color: gray;
+  border-right-color: gray;
+  border-radius: 3px;
+}
+
+.under-limit {
+  color: green;
+}
+.over-limit {
+  color: red;
+}
+
+.item_id {
+  margin-bottom: 8px;
+}
+.persons {
+  margin-top: 8px;
+  text-align: right;
+}
+.tags {
+  font-size: 70%;
+}
+.date-info {
+  font-size: 70%;
+}
+
+.lane-header {
+  color: #545454;
+}
+.lane-limits {
+  color: gray;
+  font-size: 70%;
+  text-align: right;
+}
+.lane-exceeded {
+  color: #ff5454;
+}

@@ -1,0 +1,20 @@
+%header
+  %style{:type => "text/css", :media => "screen"}
+    = css
+
+  %title Who does what - Kanban
+
+%body
+
+  %h1 #{board.title}
+  
+  .content
+    %h2 Who does what?
+    = render_people
+
+  .navigation
+    = render_navigation
+
+  .footer
+    %p
+      %em Generated on #{Time.now} by kanban.
