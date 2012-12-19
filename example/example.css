@@ -1,0 +1,25 @@
+body {
+  background-color: black;
+}
+
+th {
+  width: 20%;
+}
+
+th.subcolumns {
+  width: 40%;
+}
+
+.navigation {
+  display: none;
+}
+.footer {
+  display: none;
+}
+h1 {
+  visibility: hidden;
+}
+
+tr td {
+  height: 320px;
+}

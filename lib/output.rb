@@ -1,10 +1,11 @@
 class Output
 
-  attr_accessor :board, :compact_lanes
+  attr_accessor :board, :compact_lanes, :has_lanes, :extra_css, :plain_table
   
   def initialize board
     @board = board
     @compact_lanes = false
+    @has_lanes = true
   end
 
   def create output_dir
@@ -40,7 +41,11 @@ class Output
   end
   
   def css
-    File.read File.expand_path("../../view/board.css",__FILE__)
+    css_out = File.read File.expand_path("../../view/board.css",__FILE__)
+    if @extra_css
+      css_out << File.read( @extra_css )
+    end
+    css_out
   end
 
   def render_navigation
@@ -184,7 +189,7 @@ class Output
     render_column_limits
     render_subcolumn_headers
 
-    if @compact_lanes
+    if @compact_lanes || !@has_lanes
       o "<tr>\n"
       board.columns.each do |column|
         render_column column
@@ -196,9 +201,11 @@ class Output
       end
     end
 
-    render_subcolumn_headers
-    render_column_limits
-    render_column_headers    
+    if !@plain_table
+      render_subcolumn_headers
+      render_column_limits
+      render_column_headers
+    end
 
     o "</table>\n"
     
@@ -210,7 +217,7 @@ class Output
     @board.columns.each do |column|
       o "  <th"
       if column.has_subcolumns?
-        o " colspan='#{column.subcolumns.count}'"
+        o " class='has-subcolumns' colspan='#{column.subcolumns.count}'"
       end
       o "><div>#{column.name}"
       if !column.description.empty?
@@ -268,52 +275,27 @@ class Output
     if column.has_subcolumns?
       column.subcolumns.each do |subcolumn|
         o "  <td>\n"
-        @board.lanes.each do |lane|
-          render_items column, column.items( subcolumn ), lane, first
+        if @has_lanes
+          @board.lanes.each do |lane|
+            render_items column, column.items( subcolumn ), lane, first
+          end
+        else
+          render_items column, column.items( subcolumn ), nil, first
         end
         o "  </td>\n"
         first = false
       end
     else
       o "  <td>\n"
-      @board.lanes.each do |lane|
-        render_items column, column.items, lane, first
+      if @has_lanes
+        @board.lanes.each do |lane|
+          render_items column, column.items, lane, first
+        end
+      else
+        render_items column, column.items, nil, first
       end
       o "  </td>\n"
       first = false
-    end
-
-    return
-
-    o "<tr>\n"
-    @board.columns.each do |column|
-      o "<td"
-      if column.subcolumns.count > 1
-        o " colspan='#{column.subcolumns.count}'"
-      end
-      o ">"
-      
-      item_count = 0
-      column.items.each do |item|
-        next if !item.tags.include? lane.key
-        next if item.trashed
-        item_count += 1
-      end
-
-      limit = ""
-      limit_class = ""
-      if column.limit == 0
-        limit = ""
-      else
-        actual = item_count * 100 / column.limit
-        limit = "(#{actual}%/#{lane.limit}%)"
-        if actual > lane.limit && item_count > 1
-          limit_class = " lane-exceeded"
-        end
-      end
-      o "<div class='lane-limits #{limit_class}'>#{limit}</div>"
-
-      o "</td>"
     end
   end
 
@@ -375,11 +357,11 @@ class Output
   end  
 
   def render_items column, items, lane, first
-    if first
+    if lane && first
       o "    <div class='lane-header'>#{lane.title}</div>"
     end
     items.each do |item|
-      next if !item.tags.include? lane.key
+      next if lane && !item.tags.include?( lane.key )
       next if item.trashed
       if !item.hidden
         o "    "

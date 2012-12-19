@@ -1,0 +1,16 @@
+# Kanban Example
+
+## To do (2)
+
+* Alligator (in:2012-12-1)
+* Butterfly (in:2012-12-1)
+
+## Development (2)
+
+### WIP
+
+### Done
+
+## Deploy (1)
+
+## Done

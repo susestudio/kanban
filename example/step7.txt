@@ -1,0 +1,23 @@
+# Kanban Example
+
+## To do (2)
+
+* Dolphin (in:2012-12-2)
+
+## Development (2)
+
+### WIP
+
+* Kangaroo (in:2012-12-4,@john,#important)
+
+### Done
+
+* Camel (in:2012-12-2)
+
+## Deploy (1)
+
+* Butterfly (in:2012-12-1,@jack,@jim)
+
+## Done
+
+* Alligator (in:2012-12-1)

@@ -1,18 +1,20 @@
-%header
-  %style{:type => "text/css", :media => "screen"}
-    = css
-  %title Board - Kanban
+<!DOCTYPE html>
+%html
+  %header
+    %style{:type => "text/css", :media => "screen"}
+      = css
+    %title Board - Kanban
 
-%body
+  %body
 
-  %h1 #{board.title}
+    %h1 #{board.title}
 
-  .content  
-    = render_board
+    .content  
+      = render_board
 
-  .navigation
-    = render_navigation
+    .navigation
+      = render_navigation
 
-  .footer
-    %p
-      %em Generated on #{Time.now} by kanban.
+    .footer
+      %p
+        %em Generated on #{Time.now} by kanban.

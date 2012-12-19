@@ -1,0 +1,5 @@
+#!/usr/bin/ruby
+
+(1..8).each do |i|
+  system "../bin/kanban step#{i}.txt --no-swimlanes -o html#{i} --extra-css=example.css --plain-table"
+end

@@ -1,9 +1,15 @@
+body {
+  font-family: sans-serif;
+}
+
 h1 {
   text-align: center;
 }
 
 .content {
   margin: 0px auto;
+  width: 80%;
+  font-size: 2em;
 }
 .footer p {
   text-align: center;
@@ -21,6 +27,7 @@ h1 {
 table {
   border-width: 1px;
   border-color: gray;
+  width: 100%;
 }
 .item {
   background-color: #ffffb3;
@@ -35,6 +42,12 @@ table {
   background-color: #ffff6a;
 }
 .item.tag_onsite {
+  background-color: #ffe76a;
+}
+.item.tag_blocked {
+  background-color: #D86F89;
+}
+.item.tag_important {
   background-color: #ffe76a;
 }
 td {
