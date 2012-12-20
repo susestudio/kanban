@@ -3,7 +3,7 @@
 ## To do (2)
 
 * Dolphin (in:2012-12-16)
-* Kangaroo (in:2012-12-19,#important)
+* Koala (in:2012-12-19,#important)
 
 ## Development (2)
 

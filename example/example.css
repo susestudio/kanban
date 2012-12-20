@@ -23,11 +23,11 @@ th.subcolumns {
   display: none;
 }
 h1 {
-  visibility: hidden;
+  display: none;
 }  
 tr td {
           padding: 5px;  
-  height: 320px;
+  height: 345px;
           background-color: #f8f8f8;
   border: 1px solid #ededed;
   border-radius: 2px 2px 2px 2px;

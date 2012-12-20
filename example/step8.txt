@@ -2,13 +2,13 @@
 
 ## To do (2)
 
-* Elephant (in:2012-12-20)
+* Eagle (in:2012-12-20)
 
 ## Development (2)
 
 ### WIP
 
-* Kangaroo (in:2012-12-17,@jim,#important)
+* Koala (in:2012-12-17,@jim,#important)
 * Dolphin (in:2012-12-14,@john)
 
 ### Done

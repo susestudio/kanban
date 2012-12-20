@@ -8,7 +8,7 @@
 
 ### WIP
 
-* Kangaroo (in:2012-12-18,@jim,#important)
+* Koala (in:2012-12-18,@jim,#important)
 
 ### Done
 
