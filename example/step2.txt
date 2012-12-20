@@ -2,15 +2,15 @@
 
 ## To do (2)
 
-* Camel (in:2012-12-2)
-* Dolphin (in:2012-12-2)
+* Camel (in:2012-12-20)
+* Dolphin (in:2012-12-20)
 
 ## Development (2)
 
 ### WIP
 
-* Alligator (in:2012-12-1,@jim)
-* Butterfly (in:2012-12-1,@john)
+* Alligator (in:2012-12-19,@jim)
+* Butterfly (in:2012-12-19,@john)
 
 ### Done
 

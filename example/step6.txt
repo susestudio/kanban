@@ -2,8 +2,8 @@
 
 ## To do (2)
 
-* Kangaroo (in:2012-12-4,#important)
-* Dolphin (in:2012-12-2)
+* Dolphin (in:2012-12-16)
+* Kangaroo (in:2012-12-19,#important)
 
 ## Development (2)
 
@@ -11,11 +11,11 @@
 
 ### Done
 
-* Butterfly (in:2012-12-1)
-* Camel (in:2012-12-2)
+* Butterfly (in:2012-12-15)
+* Camel (in:2012-12-16)
 
 ## Deploy (1)
 
-* Alligator (in:2012-12-1,@jack,@john)
+* Alligator (in:2012-12-15,@jack,@john,#blocked)
 
 ## Done

@@ -215,7 +215,7 @@ class Output
   def render_column_headers
     o "<tr>\n"
     @board.columns.each do |column|
-      o "  <th"
+      o "  <th class='title'"
       if column.has_subcolumns?
         o " class='has-subcolumns' colspan='#{column.subcolumns.count}'"
       end
@@ -232,7 +232,7 @@ class Output
   def render_column_limits
     o "<tr>\n"
     @board.columns.each do |column|
-      o "  <th"
+      o "  <th class='sub-title'"
       if column.has_subcolumns?
         o " colspan='#{column.subcolumns.count}'"
       end
@@ -260,10 +260,10 @@ class Output
       @board.columns.each do |column|
         if column.has_subcolumns?
           column.subcolumns.each do |subcolumn|
-            o "  <th>#{subcolumn}</th>\n"
+            o "  <th class='sub-title'>#{subcolumn}</th>\n"
           end
         else
-          o "  <th></th>\n"
+          o "  <th class='sub-title'></th>\n"
         end
       end
       o "</tr>\n"
