@@ -27,6 +27,7 @@ Understanding the task and designing a solution.
 * Fix error 1 (#bug,in:2012-12-10,@joe)
 * Fix error 2 (#bug,in:2012-12-11,@joe,#onsite)
 * Fix error 3 (#bug,in:2012-12-12,@joe)
+* Fix another error (#bug,#blocked,in:2012-12-12,@jack)
 
 ### Done
 
@@ -43,6 +44,8 @@ Understanding the task and designing a solution.
 ## Ready for release (16)
 
 Done, reviewed, and merged items, which are ready for release.
+
+* Critical feature (#feature,#important,in:2012-12-10)
 
 
 ## Ready for test (16)

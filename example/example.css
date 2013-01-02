@@ -1,12 +1,8 @@
 body {
   background-color: black;
+  font-size: 2em;
 }
 
-table {
-  border: 0px;
-  border-radius: 5px;
-}
-    
 th {
   width: 20%;
 }
@@ -26,85 +22,21 @@ h1 {
   display: none;
 }  
 
-tr td {
-  padding: 5px;  
-  height: 345px;
-  background-color: #f8f8f8;
-  border: 1px solid #ededed;
-  border-radius: 2px 2px 2px 2px;
-}
-    
-.content {     
-  padding: 20px;
-  background-clip: border-box;
-  background-color: white;
-  border-radius: 10px 10px 10px 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-}
-
-.title {
-  width: 20%;
-  -moz-border-bottom-colors: none;
-  -moz-border-left-colors: none;
-  -moz-border-right-colors: none;
-  -moz-border-top-colors: none;
-  background: -moz-linear-gradient(center bottom , #dddddd 2%, #dddddd 51%, #c8c8c8 87%) repeat scroll 0 0 transparent;
-  background: -webkit-linear-gradient(rgb(221,221,221), rgb(200,200,200));
-  border-image: none;
-  border-style: solid;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-width: 0px;
-  color: #FFF;
-  padding: 15px;
-  text-shadow: 1px 1px 1px #666;
-}
-  
-.sub-title {  
-  background-color: #ededed;   
-  border-radius: 2px 2px 2px 2px;
-  color: #666;
-  padding: 10px;
-  text-align: center;      
-  text-shadow: 1px 1px 1px #FFF;  
-} 
-
-.under-limit { 
-  color:#7ac142;
-  text-shadow: 1px 1px 1px #FFFFFF;
-} 
-        
 .item {         
-  -moz-border-bottom-colors: none;
-  -moz-border-left-colors: none;
-  -moz-border-right-colors: none;
-  -moz-border-top-colors: none;
   background: #20ba95;
-  border-bottom-left-radius: 5px;
   border-color: #20ba95;
-  border-image: none;
-  border-style: solid;
-  border-top-left-radius: 5px;
   color: #FFFFFF;
-  padding: 10px;
   text-shadow: 1px 1px 1px #568F23;
-  margin-bottom: 0.5em;
-  margin-top: 0.5em;        
 }
-    
+
 .item.tag_important {
   background: #f8bc07;
   border-color: #f8bc07;
-  border-image: none;
-  border-style: solid;
-  color: #FFFFFF;
   text-shadow: 1px 1px 1px #a47c04;
 }
+
 .item.tag_blocked {    
   text-shadow: 1px 1px 1px #a9066e;
   background: #f02faa;
   border-color: #f02faa;
-  border-image: none;
-  border-style: solid;
-  color: #FFFFFF;
 }

@@ -9,14 +9,18 @@ h1 {
 .content {
   margin: 0px auto;
   width: 80%;
-  font-size: 2em;
+  padding: 20px;
+  background-clip: border-box;
+  background-color: white;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 .footer p {
   text-align: center;
 }
 
 .navigation {
-  text-align:center;
+  text-align: center;
 }
 .navigation ul li {
   display: inline;
@@ -28,38 +32,83 @@ table {
   border-width: 1px;
   border-color: gray;
   width: 100%;
+  border: 0px;
+  border-radius: 5px;
 }
 .item {
-  background-color: #ffffb3;
   margin: 6px;
-  border: 1px solid #b9b9b9;
-  border-bottom-color: gray;
-  border-right-color: gray;
   border-radius: 3px;
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  background: #ffffb3;
+  border-color: #ffffb3;
+  border-image: none;
+  border-style: solid;
+  color: #222222;
   padding: 8px;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;        
 }
+
 .item.tag_online {
   background-color: #ffff6a;
+  border-color: #ffff6a;
 }
 .item.tag_onsite {
   background-color: #ffe76a;
+  border-color: #ffe76a;
 }
 .item.tag_blocked {
-  background-color: #D86F89;
+  background: #f02faa;
+  border-color: #f02faa;
 }
 .item.tag_important {
-  background-color: #ffe76a;
+  background: #f8bc07;
+  border-color: #f8bc07;
 }
+
 td {
-  background-color: #e3e3e3;
   vertical-align: top;
-  position: relative;
-  border-width: 0px;
 }
 th {
-  background-color: #f0f0f0;
   border-width: 0px;
 }
+
+tr td {
+  padding: 5px;  
+  background-color: #f8f8f8;
+  border: 0px solid #ededed;
+  border-radius: 2px 2px 2px 2px;
+}
+
+.title {
+  width: 20%;
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  background: -moz-linear-gradient(center bottom , #dddddd 2%, #dddddd 51%, #c8c8c8 87%) repeat scroll 0 0 transparent;
+  background: -webkit-linear-gradient(rgb(221,221,221), rgb(200,200,200));
+  border-image: none;
+  border-style: solid;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-width: 0px;
+  color: #FFF;
+  padding: 15px;
+  text-shadow: 1px 1px 1px #666;
+}
+  
+.sub-title {  
+  background-color: #ededed;   
+  border-radius: 2px 2px 2px 2px;
+  color: #666;
+  padding: 10px;
+  text-align: center;      
+  text-shadow: 1px 1px 1px #FFF;  
+} 
 
 .blocked {
   background-color: red;
