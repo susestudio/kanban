@@ -1,0 +1,239 @@
+<header>
+  <style media='screen' type='text/css'>
+    body {
+      font-family: sans-serif;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    .content {
+      margin: 0px auto;
+      width: 80%;
+      font-size: 2em;
+    }
+    .footer p {
+      text-align: center;
+    }
+    
+    .navigation {
+      text-align:center;
+    }
+    .navigation ul li {
+      display: inline;
+      list-style-type: none;
+      padding-right: 20px;
+    }
+    
+    table {
+      border-width: 1px;
+      border-color: gray;
+      width: 100%;
+    }
+    .item {
+      background-color: #ffffb3;
+      margin: 6px;
+      border: 1px solid #b9b9b9;
+      border-bottom-color: gray;
+      border-right-color: gray;
+      border-radius: 3px;
+      padding: 8px;
+    }
+    .item.tag_online {
+      background-color: #ffff6a;
+    }
+    .item.tag_onsite {
+      background-color: #ffe76a;
+    }
+    .item.tag_blocked {
+      background-color: #D86F89;
+    }
+    .item.tag_important {
+      background-color: #ffe76a;
+    }
+    td {
+      background-color: #e3e3e3;
+      vertical-align: top;
+      position: relative;
+      border-width: 0px;
+    }
+    th {
+      background-color: #f0f0f0;
+      border-width: 0px;
+    }
+    
+    .blocked {
+      background-color: red;
+      padding: 2px;
+      border: 1px solid #b9b9b9;
+      border-bottom-color: gray;
+      border-right-color: gray;
+      border-radius: 3px;
+    }
+    
+    .under-limit {
+      color: green;
+    }
+    .over-limit {
+      color: red;
+    }
+    
+    .item_id {
+      margin-bottom: 8px;
+    }
+    .persons {
+      margin-top: 8px;
+      text-align: right;
+    }
+    .tags {
+      font-size: 70%;
+    }
+    .date-info {
+      font-size: 70%;
+    }
+    
+    .lane-header {
+      color: #545454;
+    }
+    .lane-limits {
+      color: gray;
+      font-size: 70%;
+      text-align: right;
+    }
+    .lane-exceeded {
+      color: #ff5454;
+    }
+    body {
+      background-color: black;
+    }
+    
+    table {
+      border: 0px;
+              border-radius: 5px;
+      
+        }
+        
+        th {
+      width: 20%;
+        }
+    
+    th.subcolumns {
+      width: 40%;
+    }
+    
+    .navigation {
+      display: none;
+    }
+    .footer {
+      display: none;
+    }
+    h1 {
+      display: none;
+    }  
+    tr td {
+              padding: 5px;  
+      height: 345px;
+              background-color: #f8f8f8;
+      border: 1px solid #ededed;
+      border-radius: 2px 2px 2px 2px;
+    }
+        
+    .content {     
+              padding: 20px;
+              background-clip: border-box;
+              background-color: white;
+              border-radius: 10px 10px 10px 10px;
+              box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    
+    }
+    .title {
+              width: 20%;
+              -moz-border-bottom-colors: none;
+              -moz-border-left-colors: none;
+              -moz-border-right-colors: none;
+              -moz-border-top-colors: none;
+              background: -moz-linear-gradient(center bottom , #dddddd 2%, #dddddd 51%, #c8c8c8 87%) repeat scroll 0 0 transparent;
+              background: -webkit-linear-gradient(rgb(221,221,221), rgb(200,200,200));
+              border-image: none;
+              border-style: solid;
+              border-top-left-radius: 5px;
+              border-top-right-radius: 5px;
+              border-width: 0px;
+              color: #FFF;
+              padding: 15px;
+              text-shadow: 1px 1px 1px #666;
+              
+    
+    }
+      
+    .sub-title {
+      
+          background-color: #ededed;   
+      border-radius: 2px 2px 2px 2px;
+      color: #666;
+      padding: 10px;
+      text-align: center;      
+              text-shadow: 1px 1px 1px #FFF;  
+          
+        } 
+        .under-limit { 
+          color:#7ac142;
+              text-shadow: 1px 1px 1px #FFFFFF;
+        } 
+        
+        
+        .item {         
+              -moz-border-bottom-colors: none;
+              -moz-border-left-colors: none;
+              -moz-border-right-colors: none;
+              -moz-border-top-colors: none;
+              background: #20ba95;
+              border-bottom-left-radius: 5px;
+              border-color: #20ba95;
+              border-image: none;
+              border-style: solid;
+              border-top-left-radius: 5px;
+              color: #FFFFFF;
+              padding: 10px;
+              text-shadow: 1px 1px 1px #568F23;
+              margin-bottom: 0.5em;
+      margin-top: 0.5em;        
+        }
+        
+        .item.tag_important {    
+        
+      background: #f8bc07;
+              border-color: #f8bc07;
+              border-image: none;
+              border-style: solid;
+              color: #FFFFFF;
+              text-shadow: 1px 1px 1px #a47c04;
+      }
+        .item.tag_blocked {    
+          text-shadow: 1px 1px 1px #a9066e;
+      background: #f02faa;
+              border-color: #f02faa;
+              border-image: none;
+              border-style: solid;
+              color: #FFFFFF;
+              
+      }
+  </style>
+  <title>Who does what - Kanban</title>
+</header>
+<body>
+  <h1>Kanban Example</h1>
+  <div class='content'>
+    <h2>Who does what?</h2>
+    <h3>john</h3><div class='item'><div>Butterfly</div><div class='persons'><em>john</em></div><div class='tags'></div><div class='date-info'>2 days ago</div></div>
+  </div>
+  <div class='navigation'>
+    <ul><li><a href='index.html'>Board</a></li><li><a href='https://github.com/susestudio/kanban/edit/master/data.txt'>Edit on GitHub</a></li><li><a href='done.html'>All done tasks</a></li><li><a href='history.html'>History</a></li><li><a href='leadtimes.html'>Lead times</a></li><li><a href='people.html'>Who does what?</a></li></ul>
+  </div>
+  <div class='footer'>
+    <p>
+      <em>Generated on Thu Dec 20 11:07:29 +0100 2012 by kanban.</em>
+    </p>
+  </div>
+</body>
