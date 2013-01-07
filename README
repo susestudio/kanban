@@ -47,3 +47,7 @@ tool with the input file as argument. It will write to the html directory:
 
 Limits are automatically calculated and shown on the wall, violations are
 indicated by red text.
+
+Here is an example of how a generated board looks like:
+
+![Screenshot example board](screenshot-board.png)

@@ -26,7 +26,6 @@ Understanding the task and designing a solution.
 
 * Fix error 1 (#bug,in:2012-12-10,@joe)
 * Fix error 2 (#bug,in:2012-12-11,@joe,#onsite)
-* Fix error 3 (#bug,in:2012-12-12,@joe)
 * Fix another error (#bug,#blocked,in:2012-12-12,@jack)
 
 ### Done
