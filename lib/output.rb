@@ -204,7 +204,7 @@ class Output
     if !@plain_table
       render_subcolumn_headers
       render_column_limits
-      render_column_headers
+      render_column_headers "-bottom"
     end
 
     o "</table>\n"
@@ -212,16 +212,18 @@ class Output
     @out
   end
 
-  def render_column_headers
+  def render_column_headers( title_qualifier = "" )
     o "<tr>\n"
     @board.columns.each do |column|
-      o "  <th class='title'"
+      o "  <th class='title#{title_qualifier}'"
       if column.has_subcolumns?
         o " class='has-subcolumns' colspan='#{column.subcolumns.count}'"
       end
-      o "><div>#{column.name}"
+      o "><div>"
       if !column.description.empty?
-        o " <span title='#{column.description}'>#{img 'icon-help'}</span>"
+        o "<span class='help' title='#{column.description}'>#{column.name}</span>"
+      else
+        o "#{column.name}"
       end
       o "</div>"
       o "</th>\n"
