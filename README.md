@@ -52,4 +52,4 @@ indicated by red text.
 
 Here is an example of how a generated board looks like:
 
-![Screenshot example board](screenshot-board.png)
+![Screenshot example board](https://raw.github.com/susestudio/kanban/master/screenshot-board.png)
