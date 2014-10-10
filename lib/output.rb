@@ -407,7 +407,7 @@ class Output
       elsif item.in == Date.today - 1
         o "yesterday"
       else
-        o Date.today - item.in
+        o (Date.today - item.in).to_i
         o " days ago"
       end
     end
