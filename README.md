@@ -4,6 +4,9 @@ This directory contains the data and the tool to create an electronic version
 of a Kanban card wall. The data is in the file data.txt, the tool is
 the file kanban, the output goes to the html directory.
 
+In order to run the tool install ruby and bundler (`gem install bundler`). Then
+run `bundle` in this directory to install the required dependencies.
+
 The input file "data.txt" contains a definition of the board, which
 columns are on it, and which limits they have, as well as all the items, which
 are on the board. It uses a simple markdown like text format, where the
